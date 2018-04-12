@@ -1,0 +1,268 @@
+:root {
+    --color-blue: #02b3e4;
+    --color-black: #2d3c49;
+    --color-grey: #7d97ad;
+    --color-white: #fff;
+    --color-grey-light: #faf9f9;
+    --color-grey-dark: #999;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;  /* 1rem = 10px*/
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-black);
+}
+
+/*---- Reusable Code ---- */
+.container {
+    max-width: 100rem;
+    margin: 8rem auto;
+    -webkit-box-shadow: 0 2rem 6rem rgba(0,0,0,.3);
+    box-shadow: 0 2rem 6rem rgba(0,0,0,.3);
+    background-color: var(--color-grey-light);
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 300;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    text-decoration: none;
+    outline: none;
+    padding: 1.2rem 3.7rem;
+    font-size: 1.7rem;
+    border-radius: 2rem;
+    margin: 2rem 0;
+    cursor: pointer;
+    background-color: var(--color-blue);
+    color: #fff;
+
+    transition: all .2s;
+}
+
+button:hover {
+    color: var(--color-blue);
+    border: 1px solid var(--color-blue);
+    background-color: var(--color-white)
+}
+
+footer {
+    margin-top: 3rem;
+    height: 25rem;
+    width: 100%;
+    background-color: var(--color-grey);
+    
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+/*---- HEADER ----*/
+.header {
+    height: 10rem;
+    border-bottom: 4px solid var(--color-grey);
+    background-color: var(--color-white);
+    padding: 0 2rem 0 2rem;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.name {
+    text-align: right;
+}
+
+.name h2 {
+    font-size: 2rem;
+}
+
+/*---- Hero ----*/
+.desk img {
+    margin: 1.5rem 0;
+}
+
+/*---- Featured ----*/
+.featured_title {
+    font-size: 3.75rem;
+    font-weight: 300;
+    color: var(--color-grey);
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.featured_works {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.projects {
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    -webkit-box-shadow: box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+    border-radius: .2rem;
+    overflow: hidden;
+    background-color: var(--color-white);
+}
+
+.projects:not(:last-of-type) {
+    margin-right: 2rem;
+}
+
+.project_middle {
+    background-color: var(--color-grey-light);
+}
+
+.projects img {
+    border-bottom: 1px solid var(--color-grey-dark);
+}
+
+/*---- Footer ----*/
+.footer_text {
+    font-size: 2rem;
+}
+
+.icon-link a {
+    width: 4.5rem;
+    font-size: 4.5rem;
+    color: var(--color-black);
+
+    transition: all .2s;
+}
+
+.icon-link a:hover {
+    color: var(--color-white);
+}
+
+/*----Media Queries----*/
+@media screen and (max-width: 1000px) {
+    .container {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    h1 {
+        font-size: 4em;
+    }
+
+    .name h2 {
+        font-size: 1.75em;
+    }
+
+    .featured_works {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .projects {
+        margin-bottom: 0;
+        padding-top: .5em;
+        width: 100%;
+    }
+
+    .projects:not(:last-of-type) {
+        margin-right: 0;
+    }
+
+    footer {
+        margin-top: 0;
+    }
+
+    .featured_title {
+        margin: .5em 0;
+    }
+
+    .desk img {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 499px) {
+
+    .header {
+        border-bottom: 2px solid var(--color-grey);
+    }
+
+    .header img {
+        width: 5em;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    .name h2 {
+        font-size: 1.35em;
+    }
+
+    .featured_title {
+       font-size: 2.5em;
+    }
+
+    .featured_works img {
+        width: 100%
+    }
+
+    .projects {
+        padding-top: 0;
+        font-size: 1.5em;
+    }
+
+    button {
+        margin: .5em 0;
+        padding: .5em 1.5em;
+    }
+
+    footer {
+        height: 7em;
+    }
+
+    .footer_text {
+        font-size: 1.5em;
+    }
+    
+    .icon-link a {
+        width: 3em;
+        font-size: 2em;
+    }
+    
+}
+
+
+
